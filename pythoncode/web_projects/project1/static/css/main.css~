@@ -1,0 +1,28 @@
+<<<<<<< HEAD
+
+body {
+    background:pink;
+}
+
+h1 { color:red;
+ border: 2px solid green;}
+
+h2 { color:yellow;}
+
+p { font-size: 50px; 
+    
+=======
+
+body {
+    background:pink;
+}
+
+h1 { color:red;
+ border: 2px solid green;}
+
+h2 { color:yellow;}
+
+p { font-size: 50px; 
+    
+>>>>>>> b4205b1d7de69cb4ab1f0807f63715566cc49c8a
+    color:gray;}
