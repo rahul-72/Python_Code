@@ -34,5 +34,5 @@ def update():
     #return redirect('/')
 
 
-myapp.run(host="192.168.1.112",port=5000,debug=True)
+myapp.run('localhost',port=5000,debug=True)
 
