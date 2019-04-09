@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'jd2ac=i^_v4+!e#y@jkm3s&5a8@*a@om-xi8uv9y=v#th+xckv'
+SECRET_KEY = '--r=)4sl^e80#1=(e=omxt6w3n60#qlo8t$+1m(p2ptfk1nu&b'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -54,7 +54,8 @@ ROOT_URLCONF = 'project1.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [ os.path.join(BASE_DIR,"app1/templates"),
+                 os.path.join(BASE_DIR,"app2/templates")],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -116,5 +117,9 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
-
+STATIC_ROOT=''
 STATIC_URL = '/static/'
+STATICFILES_DIRS = [ 
+    os.path.join(BASE_DIR,'app1/static'),
+    os.path.join(BASE_DIR,'app2/static'),
+     ]
