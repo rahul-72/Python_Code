@@ -1,0 +1,13 @@
+<Hello>:
+    Button:
+        size_hint: 0.2,0.2
+        text: "Click for filechooser"
+        on_press: root.btn()
+
+<MyPopup>:
+    BoxLayout:
+        FileChooserListView:
+            id: filechooser
+        Button:
+            text: "open"
+            on_press: root.open1(filechooser.path, filechooser.selection)

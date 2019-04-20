@@ -1,0 +1,25 @@
+#import Factory kivy.factory Factory
+
+<Hello>:
+    Button:
+        #size_hint : 1,1
+        text : "button1"
+        on_press : root.btn()
+
+
+<MyPopup>:
+    auto_dismiss: False
+
+    text : "heloooooooooo"
+    Button:
+        #size_hint : 0.2,0.2
+        text: 'Close me!'
+        on_press: root.hi()
+
+
+<MyPopup2>:
+    size_hint : None,None
+    size : 300,300
+    Button :
+        text : "close me......"
+        on_press : root.dismiss()

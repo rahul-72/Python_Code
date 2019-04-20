@@ -1,0 +1,18 @@
+<Hello>:
+    TabbedPanel:
+        size_hint : None,None
+        size : 500,500
+        pos_hint : {'y':0.2}
+
+        TabbedPanelItem:
+            text : 'btn1'
+            Label :
+                text : "Hi I am data of btn1"
+
+        TabbedPanelItem:
+            text : "btn2"
+            BoxLayout:
+                Label:
+                    text: "Hi I am btn2. And there is one more\n button on my righthand side"
+                Button:
+                    text: "I am righthand side button."
