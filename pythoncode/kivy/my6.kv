@@ -1,0 +1,17 @@
+<Hello>:
+    orientation: 'vertical'
+    size_hint: 0.5,0.5
+    ToggleButton:
+        id: male1
+        text: "male"
+        state: 'down'  # it is written means initialy male button is ON...
+        group: 'sex'
+        on_release: root.btn()
+
+    ToggleButton:
+        id: female1
+        text: "female"
+        group: 'sex'
+        on_release: root.btn()
+
+

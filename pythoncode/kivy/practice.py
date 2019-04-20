@@ -1,34 +1,17 @@
-import kivy
-
 from kivy.app import App
+from kivy.graphics import Canvas
+from kivy.graphics import Rectangle
 from kivy.uix.boxlayout import BoxLayout
-from kivy.lang import Builder
-
-import os
-
-Builder.load_string("""
-<MyWidget>:
-    id: my_widget
-    Button
-        text: "open"
-        on_release: my_widget.open(filechooser.path, filechooser.selection)
-    FileChooserListView:
-        id: filechooser
-        on_selection: my_widget.selected(filechooser.selection)
-""")
-
-class MyWidget(BoxLayout):
-    def open(self, path, filename):
-        with open(os.path.join(path, filename[0])) as f:
-            print (f.read())
-
-    def selected(self, filename):
-        print ("selected: %s" % filename[0])
-
-
+from kivy.uix.gridlayout import GridLayout
+from kivy.graphics import Color
 class MyApp(App):
     def build(self):
-        return MyWidget()
+        return Hello()
 
-if __name__ == '__main__':
+class Hello(BoxLayout):
+    pass
+
+
+if __name__ == "__main__":
     MyApp().run()
+
